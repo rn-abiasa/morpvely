@@ -22,7 +22,7 @@ export default function Layout() {
 
       <Outlet />
 
-      <footer className="footer wrap">
+      <footer className="footer wrap flex-col">
         <p>Made with ❤️ by Morpvely</p>
         {SITE.tiktok && (
           <a href={SITE.tiktok} target="_blank" rel="noreferrer">

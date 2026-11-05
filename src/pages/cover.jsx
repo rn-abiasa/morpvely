@@ -4,16 +4,20 @@ import { SITE, waLink } from "../data/site";
 
 const steps = [
   {
-    title: "Pilih template",
-    text: "Buka showcase, lalu coba preview-nya langsung dari HP.",
+    title: "Choose Your Theme",
+    text: "Buka showcase, coba preview-nya salin kode template dan kirim lewat chat.",
   },
   {
-    title: "Salin kodenya",
-    text: "Setiap template punya kode, contohnya MVG-01. Tinggal ketuk salin.",
+    title: "Submit Your Details",
+    text: "Kirim data dan foto yang dibutuhkan.",
   },
   {
-    title: "Kirim ke kita",
-    text: "Kirim kodenya lewat chat. Setelah itu kita sesuaikan kontennya.",
+    title: "Payment & Processing",
+    text: "Lakukan pembayaran dan website mulai diproses.",
+  },
+  {
+    title: "Review & Delivery",
+    text: "Review hasil website, lalu terima link dan QR Code.",
   },
 ];
 
