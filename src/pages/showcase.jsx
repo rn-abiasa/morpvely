@@ -96,7 +96,7 @@ function Card({ t }) {
 }
 
 export default function Showcase() {
-  const wa = waLink("Halo Morp Vely Gift, aku mau pesan template: ");
+  const wa = waLink("Halo Morpvely, aku mau pesan template: ");
 
   return (
     <main className="wrap showcase">

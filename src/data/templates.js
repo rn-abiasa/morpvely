@@ -1,5 +1,5 @@
-import mvg01 from "../assets/mvg-01.png";
-import mvg02 from "../assets/mvg-02.png";
+import mvg01 from "../assets/mvg-01.webp";
+import mvg02 from "../assets/mvg-02.webp";
 
 export const templates = [
   {
