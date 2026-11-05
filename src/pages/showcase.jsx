@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Button from "../components/Button";
 import { Sparkle } from "../components/Doodles";
 import { templates } from "../data/templates";
 import { SITE, waLink } from "../data/site";
@@ -38,55 +39,66 @@ function CopyCode({ text }) {
   }
 
   return (
-    <button type="button" className="btn btn-ink" onClick={copy}>
+    <Button variant="ink" size="sm" className="w-full" onClick={copy}>
       <span aria-live="polite">{done ? "Tersalin" : "Salin kode"}</span>
-    </button>
+    </Button>
   );
 }
 
 function Card({ t }) {
   return (
-    <li className="card sticker">
+    <li className="flex flex-col overflow-hidden rounded-2xl border-2 border-ink bg-paper shadow-sticker">
       <div
-        className="thumb"
-        style={{ "--bg": t.poster.bg, "--fg": t.poster.fg }}
+        className="relative aspect-square border-b-2 border-ink"
+        style={{ backgroundColor: t.poster.bg, color: t.poster.fg }}
       >
         {t.image ? (
           <img
             src={t.image}
             alt={`Tampilan template ${t.name}`}
             loading="lazy"
+            className="size-full object-cover"
           />
         ) : (
-          <>
-            <Sparkle className="thumb-spark" />
-            <span className="thumb-name">{t.name}</span>
-          </>
+          <div className="grid size-full place-content-center justify-items-center gap-1 text-center">
+            <Sparkle className="size-5" />
+            <span className="px-3 font-display text-2xl leading-none font-extrabold condensed">
+              {t.name}
+            </span>
+          </div>
         )}
-        <span className="code-tag">{t.code}</span>
+        <span className="absolute top-2 left-2 rounded-md border-2 border-dashed border-ink bg-butter px-1.5 py-0.5 font-display text-xs leading-none font-extrabold text-ink condensed">
+          {t.code}
+        </span>
       </div>
 
-      <div className="card-body">
-        <h2 className="card-name">{t.name}</h2>
-        <p className="card-text">{t.summary}</p>
-        <p className="price">
+      <div className="flex flex-1 flex-col gap-1 p-3">
+        <h2 className="font-display text-base leading-tight font-extrabold condensed">
+          {t.name}
+        </h2>
+        <p className="line-clamp-2 text-xs leading-snug text-ink/70">
+          {t.summary}
+        </p>
+        <p className="mt-1 font-display text-base font-extrabold">
           {t.price ? rupiah.format(t.price) : "Hubungi untuk harga"}
         </p>
 
-        <div className="card-actions">
+        <div className="mt-auto grid gap-1.5 pt-2 sm:grid-cols-2">
           {t.previewUrl ? (
-            <a
-              className="btn"
+            <Button
+              as="a"
               href={t.previewUrl}
               target="_blank"
               rel="noreferrer"
+              size="sm"
+              className="w-full"
             >
               Preview
-            </a>
+            </Button>
           ) : (
-            <button type="button" className="btn" disabled>
+            <Button size="sm" className="w-full" disabled>
               Preview segera
-            </button>
+            </Button>
           )}
           <CopyCode text={`${t.code} - ${t.name}`} />
         </div>
@@ -99,17 +111,24 @@ export default function Showcase() {
   const wa = waLink("Halo Morpvely, aku mau pesan template: ");
 
   return (
-    <main className="wrap showcase">
-      <header className="showcase-head">
-        <h1 className="section-title big">Template Showcase</h1>
-        <p>
+    <div className="flex flex-col gap-6 sm:gap-8">
+      <header className="flex flex-col gap-2">
+        <h1 className="self-start font-display text-3xl leading-tight font-extrabold condensed sticker-text sm:text-5xl">
+          Template Showcase
+        </h1>
+        <p className="max-w-md text-sm leading-relaxed sm:text-base">
           Cek preview-nya, salin kode template yang kamu suka, lalu kirim ke
           kita
           {wa || SITE.tiktok ? (
             <>
               {" "}
               lewat{" "}
-              <a href={wa || SITE.tiktok} target="_blank" rel="noreferrer">
+              <a
+                href={wa || SITE.tiktok}
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold underline decoration-2 underline-offset-2"
+              >
                 {wa ? "WhatsApp" : "TikTok"}
               </a>
             </>
@@ -118,11 +137,11 @@ export default function Showcase() {
         </p>
       </header>
 
-      <ul className="grid">
+      <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
         {templates.map((t) => (
           <Card key={t.code} t={t} />
         ))}
       </ul>
-    </main>
+    </div>
   );
 }
