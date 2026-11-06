@@ -6,7 +6,7 @@ export const templates = [
     code: "MVG-01",
     name: "Birthday MVG-01",
     folder: "birthday_v1",
-    summary: "Minimalis romantic. Pin: 030308",
+    summary: "Minimalis romantic. Pin: 030326",
     price: 25000,
     previewUrl: "https://handmadesella.pages.dev",
     image: mvg01,
