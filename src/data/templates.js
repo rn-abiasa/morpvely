@@ -1,5 +1,6 @@
 import mvg01 from "../assets/mvg-01.webp";
 import mvg02 from "../assets/mvg-02.webp";
+import mvg03 from "../assets/mvg-03.webp";
 
 export const templates = [
   {
@@ -20,6 +21,16 @@ export const templates = [
     price: 25000,
     previewUrl: "https://bdayylove.pages.dev",
     image: mvg02,
+    poster: { bg: "#7D2F36", fg: "#F3F1EE" },
+  },
+  {
+    code: "MVG-03",
+    name: "About Us MVG-03",
+    folder: "birthday_v2",
+    summary: "All things about us",
+    price: 25000,
+    previewUrl: "https://littleuniverse0323.pages.dev",
+    image: mvg03,
     poster: { bg: "#7D2F36", fg: "#F3F1EE" },
   },
 ];
