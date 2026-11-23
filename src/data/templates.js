@@ -1,7 +1,7 @@
 import mvg01 from "../assets/mvg-01.webp";
 import mvg02 from "../assets/mvg-02.webp";
 import mvg03 from "../assets/mvg-03.webp";
-import mvg04 from "../assets/mvg-04.webp";
+import mvg04 from "../assets/mvt-05.webp";
 
 export const templates = [
   {
@@ -39,8 +39,8 @@ export const templates = [
     name: "Minimalis MVG-04",
     folder: "birthday_v2",
     summary: "Minimalis romantic",
-    price: 10000,
-    previewUrl: "https://to-diva-with-love.pages.dev",
+    price: 20000,
+    previewUrl: "https://to-raka-with-love.pages.dev",
     image: mvg04,
     poster: { bg: "#7D2F36", fg: "#F3F1EE" },
   },
