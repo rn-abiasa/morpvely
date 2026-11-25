@@ -47,7 +47,7 @@ export const templates = [
   },
   {
     code: "MVG-05",
-    name: "Minimalis MVG-04",
+    name: "Minimalis MVG-05",
     folder: "birthday_v2",
     summary: "Minimalis romantic",
     price: 20000,
