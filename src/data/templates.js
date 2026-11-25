@@ -6,8 +6,8 @@ import mvg05 from "../assets/mvt-06.webp";
 
 export const templates = [
   {
-    code: "MVG-01",
-    name: "Birthday MVG-01",
+    code: "MVT-01",
+    name: "Birthday MVT-01",
     folder: "birthday_v1",
     summary: "Minimalis romantic. Pin: 030326",
     price: 25000,
@@ -16,8 +16,8 @@ export const templates = [
     poster: { bg: "#F6E4DA", fg: "#3E5A3A" },
   },
   {
-    code: "MVG-02",
-    name: "Birthday MVG-02",
+    code: "MVT-02",
+    name: "Birthday MVT-02",
     folder: "birthday_v2",
     summary: "Emosional romantic",
     price: 25000,
@@ -26,8 +26,8 @@ export const templates = [
     poster: { bg: "#7D2F36", fg: "#F3F1EE" },
   },
   {
-    code: "MVG-03",
-    name: "About Us MVG-03",
+    code: "MVT-03",
+    name: "About Us MVT-03",
     folder: "birthday_v2",
     summary: "All things about us",
     price: 25000,
@@ -36,8 +36,8 @@ export const templates = [
     poster: { bg: "#7D2F36", fg: "#F3F1EE" },
   },
   {
-    code: "MVG-04",
-    name: "Minimalis MVG-04",
+    code: "MVT-04",
+    name: "Minimalis MVT-04",
     folder: "birthday_v2",
     summary: "Minimalis romantic",
     price: 20000,
@@ -46,8 +46,8 @@ export const templates = [
     poster: { bg: "#7D2F36", fg: "#F3F1EE" },
   },
   {
-    code: "MVG-05",
-    name: "Minimalis MVG-05",
+    code: "MVT-05",
+    name: "Minimalis MVT-05",
     folder: "birthday_v2",
     summary: "Minimalis romantic",
     price: 20000,
